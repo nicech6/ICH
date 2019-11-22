@@ -1,8 +1,8 @@
 package com.ch.common.util;
 
-import androidx.v4.util.SimpleArrayMap;
 
-import com.kuxue.common.common.RegexConstants;
+
+import androidx.collection.SimpleArrayMap;
 
 import java.util.ArrayList;
 import java.util.Collections;

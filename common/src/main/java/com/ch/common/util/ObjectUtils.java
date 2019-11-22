@@ -2,8 +2,9 @@ package com.ch.common.util;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import androidx.v4.util.LongSparseArray;
-import androidx.v4.util.SimpleArrayMap;
+import androidx.collection.LongSparseArray;
+import androidx.collection.SimpleArrayMap;
+
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;

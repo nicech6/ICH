@@ -6,7 +6,7 @@ import androidx.annotation.ColorRes;
 import androidx.annotation.FloatRange;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
-import androidx.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 
 /**
  * <pre>

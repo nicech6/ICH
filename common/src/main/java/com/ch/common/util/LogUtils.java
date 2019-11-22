@@ -13,7 +13,8 @@ import android.os.Environment;
 import androidx.annotation.IntDef;
 import androidx.annotation.IntRange;
 import androidx.annotation.RequiresApi;
-import androidx.v4.util.SimpleArrayMap;
+import androidx.collection.SimpleArrayMap;
+
 import android.util.Log;
 
 import com.google.gson.Gson;

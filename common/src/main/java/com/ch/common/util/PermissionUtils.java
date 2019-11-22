@@ -12,12 +12,12 @@ import android.provider.Settings;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.WindowManager;
 
-import com.kuxue.common.common.PermissionConstants;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;

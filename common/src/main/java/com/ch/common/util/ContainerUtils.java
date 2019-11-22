@@ -2,7 +2,9 @@ package com.ch.common.util;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import androidx.v4.util.SimpleArrayMap;
+import androidx.collection.LongSparseArray;
+import androidx.collection.SimpleArrayMap;
+
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
@@ -53,7 +55,7 @@ public final class ContainerUtils {
         return obj == null || obj.size() == 0;
     }
 
-    public static boolean isEmpty(final androidx.v4.util.LongSparseArray obj) {
+    public static boolean isEmpty(final LongSparseArray obj) {
         return obj == null || obj.size() == 0;
     }
 
@@ -95,7 +97,7 @@ public final class ContainerUtils {
         return !isEmpty(obj);
     }
 
-    public static boolean isNotEmpty(final androidx.v4.util.LongSparseArray obj) {
+    public static boolean isNotEmpty(final LongSparseArray obj) {
         return !isEmpty(obj);
     }
 

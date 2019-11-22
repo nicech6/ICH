@@ -18,7 +18,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 import androidx.annotation.NonNull;
-import androidx.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
+
 import android.util.Log;
 
 import java.io.File;

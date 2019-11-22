@@ -2,7 +2,6 @@ package com.ch.common.util;
 
 import androidx.annotation.NonNull;
 
-import com.kuxue.common.common.TimeConstants;
 
 import java.text.DateFormat;
 import java.text.ParseException;
