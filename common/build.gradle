@@ -25,6 +25,21 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+        sourceSets {
+            main {
+                if (!isNeedCommonModule.toBoolean()) {
+                    // Module模式下使用debug文件夹中的清单文件
+                    manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+                } else {
+                    // Release模式下使用main文件夹中的清单文件
+                    manifest.srcFile 'src/main/AndroidManifest.xml'
+                    // Release模式下排除debug文件夹中的Java文件
+                    java {
+                        exclude 'debug/**'
+                    }
+                }
+            }
+        }
     }
 
     buildTypes {
