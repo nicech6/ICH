@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <com.ch.common.weight.TitleView
+    <com.ch.common.widght.TitleView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:title_center_str="登录"

@@ -1,4 +1,4 @@
-package com.ch.common.weight;
+package com.ch.common.widght;
 
 import android.app.Activity;
 import android.content.Context;
