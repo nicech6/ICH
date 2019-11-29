@@ -1,21 +1,35 @@
 package com.ch.login;
 
 
-import com.alibaba.android.arouter.facade.annotation.Route;
+import android.util.Log;
+import android.view.View;
 
-import com.ch.common.base.BaseActivity;
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ch.base.mvp.BaseActivity;
 
 @Route(path = "/login/main")
-public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginView {
+public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginContact.View {
 
 
     @Override
     protected void initView() {
+        findViewById(R.id.view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("TAG", "view");
+            }
+        });
+        findViewById(R.id.container).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("TAG", "container");
+            }
+        });
     }
 
     @Override
     protected void initData() {
-        mPresenter = new LoginPresenter(this);
+        mPresenter = new LoginPresenter(this, this);
     }
 
     @Override
@@ -26,5 +40,10 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     protected boolean needImmersion() {
         return true;
+    }
+
+    @Override
+    public void onShowLogin() {
+
     }
 }
