@@ -5,8 +5,8 @@ if (!isNeedLoginModule.toBoolean()) {
 }
 apply plugin: 'com.alibaba.arouter'
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
 
     defaultConfig {
@@ -14,7 +14,7 @@ android {
             applicationId "com.ch.login"
         }
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -65,5 +65,5 @@ dependencies {
     implementation 'com.alibaba:arouter-api:1.5.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
-    implementation project(':base')
+    api project(':base')
 }

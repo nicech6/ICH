@@ -1,20 +1,13 @@
-if (!isNeedCommonModule.toBoolean()) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
-}
+apply plugin: 'com.android.library'
 apply plugin: 'com.alibaba.arouter'
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
 
     defaultConfig {
-        if (!isNeedCommonModule.toBoolean()) {
-            applicationId "com.ch.base"
-        }
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -27,16 +20,11 @@ android {
         }
         sourceSets {
             main {
-                if (!isNeedCommonModule.toBoolean()) {
-                    // Module模式下使用debug文件夹中的清单文件
-                    manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-                } else {
-                    // Release模式下使用main文件夹中的清单文件
-                    manifest.srcFile 'src/main/AndroidManifest.xml'
-                    // Release模式下排除debug文件夹中的Java文件
-                    java {
-                        exclude 'debug/**'
-                    }
+                // Release模式下使用main文件夹中的清单文件
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                // Release模式下排除debug文件夹中的Java文件
+                java {
+                    exclude 'debug/**'
                 }
             }
         }

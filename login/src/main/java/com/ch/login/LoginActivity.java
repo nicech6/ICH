@@ -1,9 +1,6 @@
 package com.ch.login;
 
 
-import android.util.Log;
-import android.view.View;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ch.base.mvp.BaseActivity;
 
@@ -13,18 +10,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     protected void initView() {
-        findViewById(R.id.view).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("TAG", "view");
-            }
-        });
-        findViewById(R.id.container).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("TAG", "container");
-            }
-        });
     }
 
     @Override
