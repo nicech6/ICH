@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ch.app.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.ch.app.MyTextView
+    <Button
         android:id="@+id/tv"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:background="@color/config_color_text_red"
         android:text="Main" />
 
-</com.ch.app.MyRelativeLayout>
+</RelativeLayout>

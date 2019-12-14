@@ -1,4 +1,4 @@
-package com.ch.base.widght;
+package com.ch.base.widget;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,7 +1,6 @@
 package com.ch.base.mvp;
 
 import android.os.Bundle;
-import android.view.MotionEvent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +16,9 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         super.onCreate(savedInstanceState);
         setContentView(initLayout());
         initView();
+        bindEvent();
         initData();
+        mPresenter = initPresenter();
         if (needImmersion()) {
             ImmersionBar.with(this)
                     .statusBarColor(R.color.config_color_white)
@@ -31,6 +32,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mPresenter.onDetach();
     }
 
     @Override
@@ -40,9 +42,13 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
     protected abstract void initView();
 
+    protected abstract void bindEvent();
+
     protected abstract void initData();
 
     protected abstract int initLayout();
+
+    protected abstract P initPresenter();
 
     protected abstract boolean needImmersion();
 

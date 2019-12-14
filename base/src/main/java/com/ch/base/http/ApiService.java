@@ -10,7 +10,7 @@ import rx.Observable;
 public interface ApiService {
 
     @FormUrlEncoded
-    @POST("")
-    Observable<CommonBean<Object>> logIn(@Field("phone") String userName, @Field("password") String pwd);
+    @POST("/user/login")
+    Observable<CommonBean<Object>> login(@Field("phone") String userName, @Field("password") String pwd);
 
 }

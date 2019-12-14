@@ -1,42 +1,42 @@
 package com.ch.app;
 
-import android.view.MotionEvent;
 import android.view.View;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.ch.base.constant.Path;
 import com.ch.base.mvp.BaseActivity;
-import com.ch.base.util.ToastUtils;
+import com.ch.base.mvp.BasePresenter;
 
 public class MainActivity extends BaseActivity {
 
 
     @Override
     protected void initView() {
-
     }
 
     @Override
-    protected void initData() {
+    protected void bindEvent() {
         findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
+                ARouter.getInstance().build(Path.LOGIN_MAI).navigation();
             }
         });
     }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        return super.dispatchTouchEvent(ev);
-    }
+    protected void initData() {
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
     }
 
     @Override
     protected int initLayout() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    protected BasePresenter initPresenter() {
+        return null;
     }
 
     @Override

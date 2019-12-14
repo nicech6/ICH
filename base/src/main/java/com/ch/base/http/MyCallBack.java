@@ -1,7 +1,7 @@
 package com.ch.base.http;
 
 
-interface MyCallBack<T> {
+public interface MyCallBack<T> {
     void onNext(T t);
 
     void onComplete();
