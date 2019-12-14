@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginMvpActivity"
             android:screenOrientation="portrait" />
     </application>
 

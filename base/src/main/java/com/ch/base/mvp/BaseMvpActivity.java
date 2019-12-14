@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ch.base.R;
 import com.gyf.immersionbar.ImmersionBar;
 
-public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
+public abstract class BaseMvpActivity<P extends BasePresenter> extends AppCompatActivity {
     protected P mPresenter;
 
     @Override

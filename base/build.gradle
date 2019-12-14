@@ -59,6 +59,7 @@ dependencies {
     api rootProject.ext.dependencies.material
     api rootProject.ext.dependencies.BasePopup
     api rootProject.ext.dependencies.slidinguppanel
+    api rootProject.ext.dependencies["flyco-tablayout"]
     debugImplementation rootProject.ext.dependencies["leakcanary-android"]
     debugImplementation rootProject.ext.dependencies["leakcanary-support-fragment"]
 }
